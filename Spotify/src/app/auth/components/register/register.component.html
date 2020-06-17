@@ -1,0 +1,146 @@
+<div class="container">
+	<img src="assets/Spotify-logo.png" width="170" height="50" />
+	<h5>Inscrever-se com seu endereço de email</h5>
+
+	<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+		<!-- Value: {{ myForm.value | json }} -->
+
+		<div class="form-group">
+			<input
+				name="email"
+				type="email"
+				class="form-control"
+				id="email"
+				placeholder="Email"
+				formControlName="email"
+			/>
+		</div>
+
+		<div class="form-group">
+			<input
+				required
+				name="emailConfirmation"
+				type="email"
+				class="form-control"
+				id="emailConfirmation"
+				placeholder="Confirmar Email"
+				formControlName="emailConfirmation"
+			/>
+		</div>
+
+		<div
+			class="alert alert-danger"
+			*ngIf="
+				myForm.controls.emailConfirmation.invalid &&
+				myForm.controls.emailConfirmation.dirty
+			"
+		>
+			<p>Emails não batem</p>
+		</div>
+
+		<div class="form-group">
+			<input
+				name="password"
+				type="password"
+				class="form-control"
+				id="password"
+				placeholder="Senha"
+				formControlName="password"
+			/>
+		</div>
+
+		<div class="form-group">
+			<input
+				name="username"
+				type="text"
+				class="form-control"
+				id="username"
+				placeholder="Como devemos chamar você?"
+				formControlName="username"
+			/>
+		</div>
+
+		<p>Data de nascimento</p>
+
+		<div class="form-row">
+			<div class="col">
+				<input
+					name="dayOfBirth"
+					type="number"
+					class="form-control"
+					id="dayOfBirth"
+					placeholder="Dia"
+					formControlName="dayOfBirth"
+				/>
+			</div>
+			<div class="form-group col">
+				<select
+					name="monthOfBirth"
+					id="monthOfBirth"
+					class="form-control"
+					formControlName="monthOfBirth"
+				>
+					<option value="" disabled selected hidden>Mês</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+				</select>
+			</div>
+			<div class="col">
+				<input
+					name="yearOfBirth"
+					type="number"
+					class="form-control"
+					id="yearOfBirth"
+					placeholder="Ano"
+					formControlName="yearOfBirth"
+				/>
+			</div>
+		</div>
+		<p>Gênero</p>
+		<div class="form-group">
+			<div class="form-group">
+				<select
+					name="gender"
+					id="gender"
+					class="form-control"
+					formControlName="gender"
+				>
+					<option value="" disabled selected hidden>Escolha seu gênero</option>
+					<option>Masculino</option>
+					<option>Feminino</option>
+					<option>Não binário</option>
+				</select>
+			</div>
+		</div>
+
+		<button
+			type="submit"
+			class="btn btn-primary btn-block btn-success"
+			[disabled]="!myForm.valid"
+		>
+			Inscrever-se
+		</button>
+		<div
+			class="alert alert-success"
+			*ngIf="myForm.controls.emailConfirmation.valid && successMsg"
+		>
+			<p>Inscrição realizada com sucesso!</p>
+		</div>
+		<div
+			class="alert alert-danger"
+			*ngIf="!myForm.valid && myForm.controls.email.touched"
+		>
+			<p>Preencha os campos de email corretamente!</p>
+		</div>
+	</form>
+</div>

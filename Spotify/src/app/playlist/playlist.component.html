@@ -1,0 +1,14 @@
+<div class="playlist-container">
+	<span class="title">DEFINA O SEU MOMENTO</span>
+	<div class="list-playlist-container">
+		<div
+			class="playlistbox-container"
+			[routerLink]="['/playlist-selected', i]"
+			*ngFor="let playlist of playlists; let i = index"
+			[attr.data-index]="i"
+		>
+			<img src="{{ playlist.image }}" alt="playlist-img" />
+			<span>{{ playlist.name }}</span>
+		</div>
+	</div>
+</div>

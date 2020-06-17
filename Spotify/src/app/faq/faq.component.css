@@ -1,0 +1,110 @@
+h1 {
+  font-weight: 400;
+  color: #999;
+  font-size: 13px;
+  margin: 48px 0 12px 22px;
+}
+div.panel {
+  max-width: 65%;
+  margin: auto;
+  font-family: 'Righteous', cursive;
+  margin-top: 75px;
+  margin: 112px;
+  margin-left: 20vw;
+  
+}
+details {
+  background: #fff;
+  font-size: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+  display: flex;
+  transition: 0.4s; /* transição para separar os blocos de mensagens*/
+  
+}
+
+details div.content {
+  padding: 0px 24px 24px 24px;
+  
+}
+
+details[open] {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 2px;
+  
+}
+details[open]:first-child {
+  margin-top: 0;
+  margin-bottom: 16px;
+  border: none;
+  
+}
+details[open]:last-child {
+  margin-top: 16px;
+  margin-bottom: 0px;
+  border: none;
+  
+}
+
+summary {
+  outline: none;
+  cursor: pointer;
+  padding: 16px 24px;
+  color: #141414;
+  position: relative;
+  font-size: 15px;
+  transition: 0.3s; /* transição do hover */
+}
+summary:hover {
+  background: #3be225c2;
+}
+
+details[open] summary:hover {
+  background: none;
+  
+}
+summary ul {
+  padding-left: 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  
+}
+summary ul li {
+  flex: 1 100%;
+  flex-flow: row wrap;
+  
+}
+summary ul li span {
+  display: block;
+  font-size: 12px;
+  margin-top: 6px;
+  opacity: 0.75;
+  
+}
+summary::-webkit-details-marker {
+  display: none;
+  
+}
+
+.titleValue {
+  color: #757575;
+  
+}
+time {
+  color: #757575;
+  opacity: 0.75;
+}
+.list-unstyled {
+  margin-top: 15px;
+  padding-left: 0;
+  list-style: none;
+  
+}
+.list-unstyled li {
+  margin-bottom: 6px;
+  
+}

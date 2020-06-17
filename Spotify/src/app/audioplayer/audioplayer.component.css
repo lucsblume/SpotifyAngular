@@ -1,0 +1,217 @@
+/*--------------------------- NAVIGATION BAR AUDIO ---------------------------*/
+ul{
+  width: 100% ;
+  background: #000;
+  height: 50PX;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 83px;
+  letter-spacing: 0;
+  display: flex;
+  justify-content: space-around; /*espaçamento entre os */
+ 
+}
+
+ul li{
+  list-style: none;
+
+}
+a:hover{
+  color: #3be225c2;
+}
+
+a{
+  transition: 0.1s;
+}
+ul li {
+  color: #ffffff;
+  line-height: 50px;
+  box-sizing: border-box;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 60;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+/*-----------------------------------------------------------------------------*/
+#tituloCantor{
+  color: #ffffff;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 60;
+  margin-left: 4vw;
+  margin-top: -28vw;
+  
+}
+
+#titulomusica{
+  color: #ffffff;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 60;
+  margin-left: 50rem;
+  margin-top: -61px;
+  font-size: 18px;
+}
+
+#titulomusica2{
+  color: #ffffff;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 60;
+  margin-left: 50rem;
+  margin-top: 53px;
+  font-size: 18px;
+
+}
+
+#titulomusica3{
+  color: #ffffff;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 60;
+  margin-left: 50rem;
+  margin-top: 80px;
+  font-size: 18px;
+}
+
+#titulomusica4{
+  color: #ffffff;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 60;
+  margin-left: 50rem;
+  margin-top: 64px;
+  font-size: 18px;
+}
+
+/*--------------------------- IMAGE VIEW AUDIO ---------------------------*/
+
+
+.imgbox{
+  width: 360px;
+  height:360px;
+  background: rgba(255, 0, 0, 0);
+  border-radius: 50%;
+  align-items: center;
+  margin-top: -25vw;
+  margin-left: 5vw;
+  
+}
+
+.imgbox img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*pesquisar sobre*/
+  border-radius: 50%;
+}
+
+/*------------------------------------------------------------------*/
+
+
+
+.audioMusic{
+  margin-left: 51vw;
+  margin-top: 7vw;
+  width: 33vw;
+  height: 36px;
+  
+}
+
+.audioMusic2{
+  margin-left: 51vw;
+  margin-top: 5vw;
+  width: 33vw;
+  height: 36px;
+  
+}
+.audioMusic3{
+  margin-left: 51vw;
+  margin-top: 5vw;
+  width: 33vw;
+  height: 36px;
+  
+}
+.audioMusic4{
+  margin-left: 51vw;
+  margin-top: 5vw;
+  width: 33vw;
+  height: 36px;
+  
+}
+
+.shadow{
+  position: relative;
+  margin: 135px auto;
+  width: 90vw;
+  height: 36vw;
+  background: linear-gradient(0deg,#000,#262626);
+  border-radius: 20px;
+  
+}
+
+.shadow:before, .shadow:after{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(45deg,#fb0094,#0000ff, #00ff00, #ffff00, #ff0000
+  ,#fb0094,#0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: animate 20s linear infinite ;
+  border-radius: 20px;
+}
+
+.shadow:after{
+  filter: blur(20px);
+}
+
+@keyframes animate{ /*A regra geral do@keyframes CSS controla as etapas intermediárias em uma sequência de animação CSS*/
+
+        0%{
+          background-position: 0 0;
+        }
+
+        50%{
+          background-position:  400% 0;
+        }
+
+        100%{
+          background-position: 0 0;
+        }
+}
+
+
+
+
+/*------------------------------BUTTON NEON------------------------------*/
+#Bneon{
+  position: relative;
+  display: inline-block;
+  padding: 22px 62px;
+  color: #3be225c2;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 60;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+  margin-left: 37vw;
+  background-color:seashell;
+  border-radius: 52px;
+  box-shadow: 1px 6px 10px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  margin-bottom: 4vw;
+}
+
+#Bneon:hover{
+  color: #1b6911e8 ;
+  background: #3be225c2;
+  box-shadow: 0 0 10px #3be225c2, 0 0 40px #3be225c2,
+  0 0 10px #3be225c2 ;
+}
+
+
+/*-----------------------------------------------------------------------*/

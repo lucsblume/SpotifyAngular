@@ -1,0 +1,63 @@
+<div class="container">
+	<div class="card mt-3">
+		<div class="card-header">
+			<div class="float-left">
+				<h4>Perfil</h4>
+			</div>
+		</div>
+		<div class="card-body">
+			<table class="table table-hover">
+				<tbody>
+					<tr>
+						<td>
+							<h5>Nome de Usuário:</h5>
+							{{ user.username }}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5>Senha:</h5>
+							{{ user.password }}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5>Email:</h5>
+							{{ user.email }}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5>Data de Nascimento:</h5>
+							{{ user.dayOfBirth }}/{{ user.monthOfBirth }}/{{
+								user.yearOfBirth
+							}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5>Gênero:</h5>
+							{{ user.gender }}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="buttons">
+								<button
+									class="btn btn-warning mb-1 btn-sm"
+									(click)="onEdit(user.id)"
+								>
+									Atualizar
+								</button>
+								{{ '' }}
+								<button class="btn btn-danger mb-1 btn-sm" (click)="onLogOut()">
+									Log Out
+								</button>
+							</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

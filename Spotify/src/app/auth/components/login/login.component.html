@@ -1,0 +1,34 @@
+<div class="container">
+	<img src="assets/Spotify-logo.png" width="170" height="50" />
+	<h5>Logue-se com seu usuário Spotify</h5>
+
+	<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+		<!-- Value: {{ myForm.value | json }} -->
+
+		<div class="form-group">
+			<input
+				name="email"
+				type="email"
+				class="form-control"
+				id="email"
+				placeholder="Email"
+				formControlName="email"
+			/>
+		</div>
+
+		<div class="form-group">
+			<input
+				name="password"
+				type="password"
+				class="form-control"
+				id="password"
+				placeholder="Senha"
+				formControlName="password"
+			/>
+		</div>
+
+		<button type="submit" class="btn btn-primary btn-block btn-success">
+			Login
+		</button>
+	</form>
+</div>

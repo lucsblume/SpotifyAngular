@@ -1,0 +1,47 @@
+/*------------------------------------HEADER------------------------------------*/
+
+#nav-logo {
+	margin-left: -18vw;
+    margin-right: 8vw;
+	text-transform: uppercase;
+	color: #1ed760;
+	font-size: 25px;
+	font-family: 'Fredoka One', cursive;
+	letter-spacing: 4px;
+}
+
+.header {
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.384);
+}
+
+.header ul {
+	margin: 0;
+	text-align: center;
+}
+
+.header li {
+	/*itens da lista*/
+
+	list-style: none; /*dexa na horizontal, sem efeito lista*/
+	display: inline-block; /*deixa lado a lado*/
+}
+
+.header ul li a {
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 22px;
+	font-family: 'Fredoka One', cursive;
+	letter-spacing: 4px;
+	padding: 25px;
+	transition: all ease 0.5s;
+}
+
+.header ul li a:hover {
+	background-color: #3be225c2;
+}
+
+/*------------------------------------------------------------------------------*/

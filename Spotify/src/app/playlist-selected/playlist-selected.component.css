@@ -1,0 +1,153 @@
+@keyframes pulse {
+	0% {
+		transform: scale(1.01);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	50% {
+		transform: scale(1);
+		box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(1.01);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+div.playlist-selected-content {
+	min-height: 100%;
+}
+
+div.playlist-selected-container {
+	background-color: rgba(36, 36, 36, 0.822);
+	max-width: 1500px;
+	border-radius: 22px;
+	height: 700px;
+	margin: 60px auto;
+	padding: 40px;
+	display: flex;
+}
+
+div.playlist-selected-container div.playlist-info {
+	display: flex;
+	flex-direction: column;
+	font-size: 44px;
+	text-align: center;
+	width: 500px;
+	color: #fff;
+	margin: 0 24px;
+	font-family: 'Fredoka One', cursive;
+	letter-spacing: 2px;
+}
+
+div.playlist-selected-container div.playlist-info div.back-button {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+div.playlist-selected-container div.playlist-info div.back-button:hover svg {
+	fill: rgba(255, 255, 255, 0.5);
+}
+
+div.playlist-selected-container div.playlist-info div.back-button:hover span {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+div.playlist-selected-container div.playlist-info div.back-button svg {
+	margin-right: 8px;
+	fill: #fff;
+	width: 20px;
+}
+div.playlist-selected-container div.playlist-info div.back-button span {
+	font-size: 20px;
+}
+
+div.playlist-selected-container div.playlist-info img.playlist-image {
+	width: 500px;
+	border-radius: 50%;
+	padding: 0px;
+	background-color: rgba(29, 185, 84, 0.6);
+	margin-bottom: 40px;
+	box-shadow: 0px 0px 16px black;
+}
+
+div.music-list-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 20px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin-top: 6vw;
+}
+
+div.music-container {
+	display: flex;
+	background-color: rgba(29, 185, 84, 0.5);
+	padding: 10px;
+	align-items: center;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	color: #fff;
+	justify-content: space-between;
+	box-shadow: 0 0 5px 0px black;
+	font-family: 'Fredoka One', cursive;
+	font-weight: 100;
+	font-size: 18px;
+}
+
+div.music-container:hover {
+	transform: scale(1);
+	animation: pulse 3s infinite;
+}
+
+div.music-container div.play-info-container {
+	display: flex;
+	align-items: center;
+}
+
+.music-index {
+	font-size: 22px;
+	color: #000;
+	font-weight: bold;
+}
+
+div.music-container div.music-info {
+	margin-left: 20px;
+}
+
+div.music-container img {
+	width: 28px;
+	cursor: pointer;
+}
+
+div.music-container div.music-info div.author-album {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 13px;
+	margin-top: 4px;
+}
+
+div.music-container div.music-info div.author-album span {
+	margin: 0 12px 0 0;
+}
+
+div.music-container div.music-time {
+	font-size: 14px;
+	color: #fff;
+	margin-right: 12px;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+	background-color: rgba(0, 0, 0, 0.2);
+	height: 0;
+	border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(29, 185, 84, 0.5) 0% 0% no-repeat padding-box;
+	border-radius: 6px;
+	opacity: 1.34;
+}

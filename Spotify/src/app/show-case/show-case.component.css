@@ -1,0 +1,55 @@
+
+
+.logoAnimation{
+    position: absolute;
+    left: 40vw; /* posiciona para a esquerda */ 
+    top: 122px; /* posiciona para baixo */
+    
+    
+}
+
+.circle{
+    width: 289px; /*largura */
+    height: 290px; /*altura */
+    border-radius: 50%;
+    background-color:#fff;
+    position: absolute;
+    left: 40vw; /* posiciona para a esquerda */ 
+    top: 122px; /* posiciona para baixo */
+}
+.welcome{
+    font-size: 32px;
+    text-align: center;
+    margin-top: 24vw;  /*posiciona para baixo */
+    color:rgb(255, 255, 255);
+    font-family: 'Righteous', cursive;
+    letter-spacing: .2rem;
+}
+.slogan{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 1vw;
+    color:rgb(255, 255, 255);
+    font-family: 'Righteous', cursive;
+    letter-spacing: .2rem;
+}
+
+.Comercial{
+    position: absolute;
+    left: 27vw;  
+    top: 38vw; 
+    border-radius: 2em;
+    box-shadow: 11px -7px 14px 0px rgba(0, 0, 0, 0.384);
+    overflow: hidden;
+
+}
+
+.WelcomeFamily{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 28vw;  /*posiciona para baixo */
+    color:rgb(255, 255, 255);
+    font-family: 'Righteous', cursive;
+    letter-spacing: .2rem;
+}
+

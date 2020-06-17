@@ -1,0 +1,25 @@
+<div class="header">
+	<ul>
+		<!--Representa Lista de itens -->
+		<li id="nav-logo">
+			<img src="assets/iconSpot.png" width="35" height="35" /> spotify
+		</li>
+		<!--Logo Spotify na navbar -->
+
+		<li><a routerLink="">Home</a></li>
+		<li><a routerLink="/faq">Ajuda</a></li>
+		<li><a routerLink="/playlist">Playlists</a></li>
+		<li *ngIf="!isLoggedIn">
+			<a [routerLink]="['register']" routerLinkActive="active">Cadastro</a>
+		</li>
+		<li *ngIf="!isLoggedIn">
+			<a [routerLink]="['login']" routerLinkActive="active">Login</a>
+		</li>
+		<li *ngIf="isLoggedIn">
+			<a (click)="perfil()" routerLinkActive="active">Perfil</a>
+		</li>
+		<li *ngIf="isLoggedIn">
+			<a (click)="playlists()" routerLinkActive="active">Minhas Playlists</a>
+		</li>
+	</ul>
+</div>

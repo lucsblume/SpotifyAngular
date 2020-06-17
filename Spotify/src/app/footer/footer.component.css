@@ -1,0 +1,109 @@
+/*------------------------------------FOOTER------------------------------------*/
+
+footer {
+  display: flow-root; /*permite que formate seu display para o pixel mais proximo(encaixe ou grude)*/
+  padding-top: 4em;
+  margin: 0;
+  background-image: linear-gradient(
+    to top,
+    rgb(82, 82, 82),
+    black
+  ); /*gradiente baixo pra cima*/
+}
+
+footer h2,
+footer p,
+footer a,
+footer span {
+  color: #fff;
+  font-weight: 80; /*espessura da fonte*/
+}
+
+footer h2,
+li {
+  font-family: "Fredoka One", cursive;
+  font-weight: 80;
+  color: #1ed760;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer ul {
+  right: 60px;
+  padding: 0;
+}
+
+footer li {
+  list-style: none;
+  /* display: inline-block;*/ /*para deixar lado a lado*/
+}
+
+.footer-box {
+  width: 31%;
+  padding: 1%;
+  float: left;
+}
+
+footer .wrapper:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.company-footer {
+  width: 80%;
+}
+
+.company-footer h2 {
+  margin-top: 20px;
+}
+
+.footer-list li {
+  margin-bottom: 15px;
+}
+
+.footer-list a {
+  transition: 0.3s;
+}
+
+.footer-list a:hover {
+  color: rgb(72, 167, 53);
+}
+
+.footer-list li:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.articles-footer {
+  width: 80%;
+}
+
+.footer-list.footer-articles-list span {
+  display: block;
+  float: none;
+}
+
+.footer-bottom {
+  font-family: "Fredoka One", cursive;
+  font-weight: 80;
+  padding-left: 85vw;
+}
+
+.imageFacebook {
+  margin-top: 0;
+  margin-left: -11px;
+}
+
+.imageInstagram {
+  margin-top: -65px;
+  margin-left: 75px;
+}
+
+.imageTwitter {
+  margin-top: -65px;
+  margin-left: 160px;
+}

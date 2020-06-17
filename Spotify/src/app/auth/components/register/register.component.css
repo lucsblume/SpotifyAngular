@@ -1,0 +1,24 @@
+.container {
+	background: #fff;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding: 1.5rem;
+	border-radius: 10px;
+}
+
+.container > h5 {
+	text-align: center;
+}
+
+.btn {
+	margin-top: 1rem;
+}
+
+p {
+	margin-bottom: -0.1rem;
+	color: grey;
+}
+img {
+	display: block;
+	margin: 0 auto 2rem auto;
+}

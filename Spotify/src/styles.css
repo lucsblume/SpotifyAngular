@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+@import "https://fonts.googleapis.com/css?family=Fredoka+One|Righteous&display=swap";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  margin: 0; /*margem para pegar a tela toda*/
+  background-image: url("../src/assets/rgbBackground.png");
+}

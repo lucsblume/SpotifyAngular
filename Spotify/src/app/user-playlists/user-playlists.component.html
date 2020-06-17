@@ -1,0 +1,214 @@
+<div class="container">
+	<h3 id="MainPlaylist">Escute Suas Playlists Favoritas</h3>
+	<button
+		id="buttonCreate"
+		type="button"
+		class="btn btn-success"
+		*ngIf="!creatingPlaylist"
+		(click)="createPlaylist()"
+	>
+		Crie sua playlist
+	</button>
+	<div class="playlist" *ngIf="creatingPlaylist">
+		<div class="md-form">
+			<label for="inputLGEx"> <b> Insira o nome da playlist:</b></label>
+			<input
+				type="text"
+				id="form1"
+				class="form-control"
+				placeholder="Nome da Playlist"
+				(input)="playlistName = $event.target.value"
+			/>
+
+			<div class="searchSongs">
+				<label for="inputLGEx"> <b> Insira o nome da música:</b></label>
+				<input
+					type="text"
+					class="form-control"
+					placeholder="Procure músicas pelo título"
+					(keyup)="searchSongs($event)"
+				/>
+			</div>
+
+			<div class="searchSongs">
+				<label for="inputLGEx"> <b> Insira o nome do cantor:</b></label>
+				<input
+					type="text"
+					class="form-control"
+					placeholder="Procure músicas pelo autor"
+					(keyup)="searchSongsByAuthor($event)"
+				/>
+			</div>
+		</div>
+
+		<div class="music-list-container">
+			<div
+				class="music-container"
+				*ngFor="let audio of searchResult; let i = index"
+			>
+				<div class="play-info-container">
+					<div (click)="[playMusic(audio.path, i)]">
+						<img
+							class="play-pause-button"
+							src="../../../assets/play.svg"
+							alt=""
+						/>
+					</div>
+
+					<div class="music-info">
+						<span class="music-index">{{ i + 1 }}. </span>
+						<span>{{ audio.name }}</span>
+
+						<div class="author-album">
+							<span>{{ audio.author }}</span>
+							<span>|</span>
+							<span>{{ audio.album }}</span>
+						</div>
+					</div>
+				</div>
+
+				<button
+					(click)="addToPlaylist(audio)"
+					type="button"
+					class="btn btn-primary"
+				>
+					Add
+				</button>
+			</div>
+		</div>
+		<button
+			id="buttonCreate"
+			type="button"
+			class="btn btn-success"
+			(click)="finishPlaylist()"
+		>
+			Crie minha playlist!
+		</button>
+	</div>
+	<div
+		class="music-container"
+		*ngFor="let playlist of user.playlist; index as i"
+	>
+		<h2>{{ user.playlist[i].name }}</h2>
+
+		<div class="music-list-container">
+			<div *ngFor="let playlist of user.playlist[i].songs; index as j">
+				{{ user.playlist[i].songs[j].name }}
+
+				<div class="play-info-container">
+					<div
+						(click)="[playMusic(user.playlist[i].songs[j].path, j)]"
+					>
+						<img
+							class="play-pause-button"
+							src="../../../assets/play.svg"
+							alt=""
+						/>
+					</div>
+
+					<div class="music-info">
+						<span class="music-index">{{ j }}. </span>
+						<span>{{ user.playlist[i].songs[j].name }}</span>
+
+						<div class="author-album">
+							<span>{{ user.playlist[i].songs[j].author }}</span>
+							<span>|</span>
+							<span>{{ user.playlist[i].songs[j].album }}</span>
+						</div>
+					</div>
+				</div>
+				<div>
+					<button
+						type="button"
+						class="btn btn-danger"
+						(click)="retirarMusica(i, j)"
+					>
+						Remover Música
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="addMusicPlaylist">
+			<button
+				id="buttonAddMusics"
+				type="button"
+				class="btn btn-primary"
+				*ngIf="!creatingPlaylist"
+				(click)="editPlaylist()"
+			>
+				Adicionar músicas
+			</button>
+			<div class="playlist" *ngIf="editingPlaylist">
+				<div class="md-form">
+					<div class="searchSongs">
+						<label for="inputLGEx">
+							<b> Insira o nome da música:</b></label
+						>
+						<input
+							type="text"
+							class="form-control"
+							placeholder="Procure músicas pelo título"
+							(keyup)="searchSongs($event)"
+						/>
+					</div>
+
+					<div class="searchSongs">
+						<label for="inputLGEx">
+							<b> Insira o nome do cantor:</b></label
+						>
+						<input
+							type="text"
+							class="form-control"
+							placeholder="Procure músicas pelo autor"
+							(keyup)="searchSongsByAuthor($event)"
+						/>
+					</div>
+				</div>
+
+				<div class="music-list-container">
+					<div
+						class="music-container"
+						*ngFor="let audio of searchResult; let k = index"
+					>
+						<div class="play-info-container">
+							<div (click)="[playMusic(audio.path, k)]">
+								<img
+									class="play-pause-button"
+									src="../../../assets/play.svg"
+									alt=""
+								/>
+							</div>
+
+							<div class="music-info">
+								<span class="music-index">{{ k + 1 }}. </span>
+								<span>{{ audio.name }}</span>
+
+								<div class="author-album">
+									<span>{{ audio.author }}</span>
+									<span>|</span>
+									<span>{{ audio.album }}</span>
+								</div>
+							</div>
+						</div>
+
+						<button
+							(click)="addToEditPlaylist(audio, i)"
+							type="button"
+							class="btn btn-primary"
+						>
+							Add
+						</button>
+					</div>
+				</div>
+				<button
+					id="buttonCreate"
+					type="button"
+					class="btn btn-success"
+					(click)="finishEditingPlaylist()"
+				>
+					Confirmar Seleção
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
