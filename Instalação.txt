@@ -1,0 +1,40 @@
+FRONT END:
+
+
+Instale Angular:
+
+npm install -g @angular/cli
+
+
+Intale Knex:
+
+npm install knex --save
+
+
+Instale sqlite3:
+
+npm install sqlite3
+
+
+Instale Cors:
+
+npm install cors
+
+
+
+execute o front:
+
+ng server --open
+
+
+
+BACK END:
+
+Instale yarn:
+
+yarn
+
+
+execute o back:
+
+yarn dev
